@@ -6,12 +6,12 @@ import Alert from './components/Alert'
 import About from './components/About';
 import { useState } from 'react';
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 function App() {
   const[change,setChange]=useState('primary')
   const [val,setVal]=useState(1)
@@ -87,20 +87,22 @@ const handleG=()=>{
 <>
 <Navbar title="Textutils" abouttext="About" mode={mode} toggleMode={toggleMode} change={val} handleB={handleB} handleG={handleG} handleR={handleR} handleY={handleY} />
 <Alert alert={alert}/>
-<Router>
+{/* <Router> */}
 <div className="container">
-<Routes>
+{/* <Routes>
             <Route path="/about" element={<About />}>
             </Route>
-            <Route path="/" element={<Textform showAlert={showAlert} heading="Enter your text to analyze" mode={mode} change={change}/> }>
+            <Route path="/" element={ }>
             </Route>
-          </Routes>
+          </Routes> */}
+            <Textform showAlert={showAlert} heading="Enter your text to analyze" mode={mode} change={change}/>
         
 </div>
-</Router>
+{/* </Router> */}
 {/* <div className="container my=3">
   <About/>
   </div> */}
+
 </>
   );
 }
