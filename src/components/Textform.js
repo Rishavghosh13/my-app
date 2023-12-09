@@ -34,6 +34,7 @@ export default function Textform(props) {
    const copyText = () => {
     navigator.clipboard.writeText(text);
     props.showAlert("Text is copied","success")
+    document.getSelection().removeAllRanges()
 }
 const clearSpace = () => {
   let newT = text.split(/[ ]+/);
